@@ -39,7 +39,7 @@ The primary objective was to design a lightweight and practical framework capabl
 - Click on `Upload Audio` to upload audio file from computer.
 - Choose file to upload wav or mp3 audio containing speech.
 
-[![Watch Demo](demo/thumbnail.png)](demo/videoDemo.mp4)
+[![Watch Demo](demo/videoDemo.mp4)
 
 ## AUTHOR
 
