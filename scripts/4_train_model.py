@@ -16,7 +16,7 @@ LR = 1e-3
 LAMBDA_TEMP = 0.1
 EPOCHS = 30
 
-OUTPUT_DIR = "training_data_combined"
+OUTPUT_DIR = "training_data"
 SAVE_PATH = "model.pth"
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

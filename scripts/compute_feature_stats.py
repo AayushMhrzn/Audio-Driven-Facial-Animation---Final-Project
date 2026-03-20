@@ -4,7 +4,7 @@ from tqdm import tqdm
 from extract_lip_features import extract_features
 
 #DATA_DIR = "training_data_seq_centered"
-Y_PATH = "training_data_combined/combined_Y_seq.npy"
+Y_PATH = "training_data/Y_seq.npy"
 
 print("Loading training lip data...")
 Y = np.load(Y_PATH)  
