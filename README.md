@@ -39,10 +39,11 @@ The primary objective was to design a lightweight and practical framework capabl
 - Click on `Upload Audio` to upload audio file from computer.
 - Choose file to upload wav or mp3 audio containing speech.
 
-[![Watch Demo](demo/videoDemo.mp4)
+https://github.com/user-attachments/assets/312964ea-cf72-4b8a-91f7-5d1870769852
+
+---
 
 ## AUTHOR
 
 © 2026 Aayush Maharjan. All rights reserved.
 This project is developed for academic and demonstration purposes.  
-
