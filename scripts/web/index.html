@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AVATAR : Audio Driven Facial Animation</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#14001f,#1f0033);
+color:white;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* MAIN LAYOUT */
+
+.container{
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+/* AVATAR AREA */
+
+#avatar-section{
+width:900px;
+height:600px;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+margin-bottom:10px;
+}
+
+.header h1{
+font-size:80px;
+background:linear-gradient(90deg,#ee7dff,#c77dff,#9d4edd);
+background-clip:text;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.header p{
+opacity:0.8;
+margin-top:6px;
+font-size:18px;
+}
+
+/* CONTROL AREA */
+
+.controls{
+display:flex;
+gap:30px;
+margin-top:20px;
+align-items:center;
+}
+
+/* BUTTON STYLE */
+
+button,label{
+background:rgba(199,125,255,0.12);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:14px;
+padding:14px 22px;
+cursor:pointer;
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-size:16px;
+transition:0.25s;
+}
+
+button:hover,label:hover{
+background:rgba(199,125,255,0.25);
+transform:scale(1.05);
+}
+
+/* MIC BUTTON */
+
+#micBtn.listening{
+background:red;
+box-shadow:0 0 15px red;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 5px red;}
+50%{box-shadow:0 0 20px red;}
+100%{box-shadow:0 0 5px red;}
+}
+
+/* HIDE FILE INPUT */
+
+#uploadBtn{
+display:none;
+}
+
+</style>
+
+<script type="importmap">
+{
+"imports":{
+"three":"https://unpkg.com/three@0.154.0/build/three.module.js",
+"three/examples/jsm/":"https://unpkg.com/three@0.154.0/examples/jsm/"
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>AVATAR AI</h1>
+<p>Audio Driven Facial Animation System</p>
+</div>
+
+<div id="avatar-section"></div>
+
+<div class="controls">
+
+<!-- MIC BUTTON -->
+
+<button id="micBtn">
+
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+stroke="currentColor" stroke-width="2.5"
+stroke-linecap="round" stroke-linejoin="round">
+
+<path d="M12 1a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V4a3 3 0 0 1 3-3z"></path>
+<path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+<line x1="12" y1="19" x2="12" y2="23"></line>
+<line x1="8" y1="23" x2="16" y2="23"></line>
+
+</svg>
+
+Record Voice
+
+</button>
+
+<!-- UPLOAD BUTTON -->
+
+<label>
+
+<svg width="26" height="26" viewBox="0 0 24 24"
+fill="none" stroke="currentColor"
+stroke-width="2.5" stroke-linecap="round"
+stroke-linejoin="round">
+
+<line x1="12" y1="5" x2="12" y2="19"></line>
+<line x1="5" y1="12" x2="19" y2="12"></line>
+
+</svg>
+
+Upload Audio
+
+<input type="file" id="uploadBtn" accept=".wav,.mp3">
+
+</label>
+
+</div>
+
+</div>
+
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
