@@ -1,7 +1,8 @@
 # AVATAR AI - AUDIO DRIVEN FACIAL ANIMATION 
-An AI-powered interactive 3D avatar that predict generates facial animations directly from audio input using deep learning, CNN and TCN model. The primary objective was to design a lightweight and practical framework capable of synthesizing lip motion without requiring video input, motion capture systems, or depth sensors.
-Such systems are essential for virtual Avatars, Anchors and assistive communication technologies.
-My project demonstrates **speech-driven facial animation**, where an avatar lip-syncs based on input audio (uploaded audio file or live audio input).
+
+This is my Final Project for Bachelor's Degree in Computer Engineering, which takes Audio Input (Uploaded Audio file or Mic Input) and then generates lip movement and animates 3D AVATAR based on the output predicted by the CNN-TCN model.
+
+The primary objective was to design a lightweight and practical framework capable of synthesizing lip motion without requiring Video input, motion capture systems. 
 
 ---
 
@@ -16,18 +17,32 @@ My project demonstrates **speech-driven facial animation**, where an avatar lip-
 
 `Audio Input → MFCC Extraction → CNN-TCN Model → Lip Landmarks → Blendshapes → 3D Avatar Animation`
 
+---
+
 ## Setup guide
 
 - Requirements.txt is provided to install dependencies.
 - change to correct directory to run the script. 
 `cd .\scripts\`
    
-## Start Backend (Flask)
+### Start Backend (Flask)
 `python app.py`
 
-## Start Frontend Server
+### Start Frontend Server
 - change directory to web to run the frontend then run the command
 `python -m http.server 5500`
 
+---
 
+## 🎬 Project Demo
+- Open http://localhost:5500 to view the project in the browser.
+- Click on `Upload Audio` to upload audio file from computer.
+- Choose file to upload wav or mp3 audio containing speech.
+
+[![Watch Demo](demo/thumbnail.png)](demo/videoDemo.mp4)
+
+## AUTHOR
+
+© 2026 Aayush Maharjan. All rights reserved.
+This project is developed for academic and demonstration purposes.  
 
